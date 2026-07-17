@@ -1,0 +1,426 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Body with background image */
+body {
+    background: linear-gradient(rgba(5,6,10,0.88), rgba(5,6,10,0.93)), url('img.avif') no-repeat center center fixed, #0a0a0a;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+}
+
+::selection{background:#00ffcc;color:#000;}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+nav:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffcc;
+    transition: 0.3s;
+}
+
+nav .logo:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ffcc;
+    transform: scale(1.1);
+}
+
+/* Home Section */
+#home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    background: none;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 20px;
+}
+
+.home-photo {
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ffcc;
+    box-shadow: 0 0 30px rgba(0,255,204,0.45);
+    margin-bottom: 26px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#home h1 {
+    font-size: 48px;
+    font-weight: bold;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+#home h1 span {
+    color: #00ffcc;
+}
+
+#home p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #bbb;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#home .tagline {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #00ffcc;
+    margin-top: 4px;
+}
+
+.btn-row{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:24px;}
+
+/* Button Style */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #00251d;
+    font-weight: 600;
+    background: #00ffcc;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #33ffd7;
+    transform: scale(1.1);
+}
+
+.btn.btn-outline{
+    background:transparent;
+    color:#00ffcc;
+    border:2px solid #00ffcc;
+}
+.btn.btn-outline:hover{
+    background:rgba(0,255,204,0.1);
+    color:#00ffcc;
+}
+
+/* Section General Style */
+section {
+    padding: 80px 20px;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+section h2 {
+    font-weight: 600;
+    font-size: 32px;
+}
+
+section h2 span.count{
+    color:#00ffcc;
+    font-size:14px;
+    display:block;
+    letter-spacing:3px;
+    margin-bottom:6px;
+    font-weight:500;
+}
+
+/* About Box Style */
+.about-box {
+    max-width: 720px;
+    margin: 30px auto 0;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about-box p{
+    color:#d8d8d8;
+    line-height:1.8;
+    text-align:left;
+}
+
+.cert-row{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:22px;
+}
+.cert-pill{
+    background:rgba(0,255,204,0.08);
+    border:1px solid rgba(0,255,204,0.4);
+    color:#00ffcc;
+    padding:8px 16px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+/* Cards */
+.card,
+.education-card,
+.experience-card,
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 24px 28px;
+    margin: 15px auto;
+    width: 60%;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.card:hover,
+.education-card:hover,
+.experience-card:hover,
+.project:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 15px rgba(0, 255, 204, 0.4);
+}
+
+.education-card h3, .experience-card h3, .project h3{
+    color:#00ffcc;
+    margin-bottom:6px;
+    font-size:19px;
+}
+.education-card p, .experience-card p{
+    color:#ccc;
+    margin-top:2px;
+}
+.experience-card .exp-date{
+    color:#888;
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+.experience-card ul{
+    margin:10px 0 0 20px;
+    color:#ccc;
+}
+.experience-card ul li{
+    margin-bottom:8px;
+    line-height:1.5;
+}
+
+.project .metric{
+    display:inline-block;
+    background:rgba(0,255,204,0.12);
+    color:#00ffcc;
+    padding:5px 12px;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+.project p{color:#ccc; margin-bottom:14px;}
+.project .tags{margin-bottom:14px;}
+.project .tags span{
+    display:inline-block;
+    background:rgba(255,255,255,0.08);
+    color:#bbb;
+    font-size:11px;
+    padding:4px 10px;
+    border-radius:5px;
+    margin:0 6px 6px 0;
+}
+.project a{
+    color:#00ffcc;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+}
+.project a:hover{text-decoration:underline;}
+
+/* Skills Section */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-list span {
+    background: #00ffcc;
+    color: black;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.skills-list span:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #00ffcc;
+}
+
+.skills-group-label{
+    color:#888;
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin:26px 0 10px;
+}
+.skills-group-label:first-of-type{margin-top:10px;}
+
+/* Stats strip */
+.stats-strip{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+.stats-strip .stat{
+    min-width:120px;
+}
+.stats-strip .stat .num{
+    font-size:30px;
+    font-weight:700;
+    color:#00ffcc;
+}
+.stats-strip .stat .lbl{
+    font-size:12px;
+    color:#999;
+    margin-top:4px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+    background: #121212;
+}
+
+#contact h2 {
+    font-size: 32px;
+}
+
+#contact p{color:#bbb; margin-top:10px;}
+
+.social-icons a {
+    color: white;
+    margin: 0 15px;
+    font-size: 26px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00ffcc;
+    transform: scale(1.2);
+}
+
+.contact-detail{
+    margin-top:22px;
+    color:#ccc;
+    font-size:14px;
+}
+.contact-detail a{color:#00ffcc; text-decoration:none;}
+
+/* Footer */
+footer {
+    background: #0d0d0d;
+    padding: 10px;
+    color: #bbb;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .card,
+    .education-card,
+    .experience-card,
+    .project {
+        width: 85%;
+    }
+
+    .about-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .stats-strip{gap:24px;}
+}
+
+@media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+}
